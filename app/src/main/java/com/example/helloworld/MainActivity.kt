@@ -74,7 +74,7 @@ fun Author() {
         text = "By: erik-lance",
         fontStyle = FontStyle.Italic,
         fontWeight = FontWeight.Light,
-        fontSize = 2.sp,
+        fontSize = 4.sp,
         modifier = Modifier
     )
 }
