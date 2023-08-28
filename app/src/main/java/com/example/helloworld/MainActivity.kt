@@ -67,3 +67,18 @@ fun Author() {
         modifier = Modifier
     )
 }
+
+/**
+ * Lists socials (GitHub, LinkedIn, Twitter, etc.)
+ */
+@Preview(showBackground = true)
+@Composable
+fun Contacts() {
+    Row (
+        modifier = Modifier
+            .fillMaxWidth()
+    ) {
+        Text("Website")
+        Text("GitHub")
+    }
+}
