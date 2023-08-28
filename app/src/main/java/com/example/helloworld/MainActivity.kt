@@ -86,12 +86,11 @@ fun Author() {
 @Composable
 fun Contacts() {
     Row (
-        horizontalArrangement = Arrangement.SpaceBetween,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
             .fillMaxWidth()
     ) {
         Text("Website")
         Text("GitHub")
-        Spacer(modifier = Modifier.fillMaxWidth())
     }
 }
