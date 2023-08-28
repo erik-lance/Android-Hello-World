@@ -3,8 +3,10 @@ package com.example.helloworld
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -51,8 +53,17 @@ fun App() {
 @Preview(showBackground = true)
 @Composable
 fun Hero() {
-    Column {
+    Column (
+        modifier = Modifier.padding(16.dp)
+    ) {
         Text("Hello World!")
+        Text(
+            text = "This is my first Jetpack Compose app. " +
+                "I'm excited to learn more and to use Kotlin!",
+            fontSize = 8.sp,
+            modifier = Modifier
+                .padding(horizontal = 16.dp, vertical = 8.dp)
+        )
         Author()
     }
 }
@@ -63,7 +74,7 @@ fun Author() {
         text = "By: erik-lance",
         fontStyle = FontStyle.Italic,
         fontWeight = FontWeight.Light,
-        fontSize = 5.sp,
+        fontSize = 2.sp,
         modifier = Modifier
     )
 }
@@ -75,10 +86,12 @@ fun Author() {
 @Composable
 fun Contacts() {
     Row (
+        horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
             .fillMaxWidth()
     ) {
         Text("Website")
         Text("GitHub")
+        Spacer(modifier = Modifier.fillMaxWidth())
     }
 }
