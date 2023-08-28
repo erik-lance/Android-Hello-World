@@ -10,7 +10,10 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.helloworld.ui.theme.HelloWorldTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,14 +45,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun Hero() {
     Column {
         Text("Hello World!")
-        Text("This is Erik.")
+        Author()
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    HelloWorldTheme {
-        Greeting("Android")
-    }
+fun Author() {
+    Text(
+        text = "By: erik-lance",
+        modifier = Modifier,
+        fontStyle = FontStyle.Italic,
+        fontWeight = FontWeight.Light,
+        fontSize = 5.sp
+
+    )
 }
