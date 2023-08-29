@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Code
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -105,7 +106,14 @@ fun Contacts() {
                 contentDescription = "Website"
             )
         }
-        Text("Website")
-        Text("GitHub")
+
+        IconButton(onClick = {
+            uriHandler.openUri("https://github.com/erik-lance")
+        }) {
+            Icon(
+                imageVector = Icons.Filled.Code,
+                contentDescription = "GitHub"
+            )
+        }
     }
 }
