@@ -52,6 +52,7 @@ fun App() {
             .padding(16.dp)
     ) {
         Hero()
+        Contacts()
     }
 }
 
