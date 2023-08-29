@@ -97,9 +97,10 @@ fun Contacts() {
     val uriHandler = LocalUriHandler.current
 
     Row (
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.Start,
         modifier = Modifier
             .fillMaxWidth()
+            .height(16.dp)
     ) {
         IconButton(onClick = {
             uriHandler.openUri("https://www.eriklance.com")
